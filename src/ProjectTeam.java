@@ -2,10 +2,11 @@ import java.util.ArrayList;
 
 public class ProjectTeam {
     private String projectName;
-    private ArrayList<Employee> employees;
+    ArrayList<Employee> employees = new ArrayList<>();
 
     public ProjectTeam(String projectName) {
         this.projectName = projectName;
+
     }
 
     public void addEmployee(Employee employee) {
