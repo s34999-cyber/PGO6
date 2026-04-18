@@ -23,4 +23,20 @@ public class ProjectTeam {
         }
         return total;
     }
+    public Employee findByID(String employeeID) {
+        for (Employee employee : employees) {
+            if (employee.getEmployeeID().equals(employeeID)) {
+                return employee;
+            }
+        }
+        System.out.println("Employee with ID " + employeeID + " not found");
+        return null;
+    }
+    public void printDevelopers() {
+        for (Employee employee : employees) {
+            if(employee instanceof Developer) {
+                System.out.println(employee.toString());
+            }
+        }
+    }
 }
